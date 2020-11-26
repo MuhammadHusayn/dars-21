@@ -40,7 +40,6 @@ label {
 	border: 1px solid black;
 	border-radius: 4px;
 	padding: 5px;
-	/*background-color: green;*/
 }
 .checkbox-sport:checked + .input-controller {
 	background-image: url('../images/tick.svg');
