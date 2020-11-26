@@ -15,3 +15,82 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+label {
+	display: flex;
+	align-items: center;
+}
+
+.input-controller {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 5px;
+	/*background-color: green;*/
+}
+.checkbox-sport:checked + .input-controller {
+	background-image: url('../images/tick.svg');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: left center;
+}
+.checkbox-sport:disabled + .input-controller {
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: left center;
+	opacity: 0.5;
+}
+.checkbox-sport:disabled:checked + .input-controller {
+	background-image: url('../images/tick.svg');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: left center;
+	opacity: 0.5;
+}
+
+.checkbox-sport:disabled ~ .input-label {
+	opacity: 0.5;
+}
+
+
+.input-controller-radio {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 15px;
+	height: 15px;
+	border: 1px solid black;
+	border-radius: 50%;
+	position: relative;
+}
+
+.input-controller-radio::before {
+	display: inline-block;
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+
+.radio-sport:checked + .input-controller-radio::before {
+	background-color: magenta;
+	box-shadow: 0 0 5px 1px black;
+}
+
